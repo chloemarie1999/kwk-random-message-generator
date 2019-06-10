@@ -16,7 +16,7 @@ var rbButton= document.querySelector('#rb-btn')
 var indieButton= document.querySelector('#indie-btn')
 var altButton= document.querySelector('#alt-btn')
 var bedpopButton= document.querySelector('#bedpop-btn')
-
+//text to put into the result on button click
 popButton.addEventListener('click', generateText('pop'))
 rbButton.addEventListener('click', generateText('rb'))
 indieButton.addEventListener('click', generateText('indie'))
@@ -26,7 +26,7 @@ bedpopButton.addEventListener('click', generateText('bedpop'))
 function generateText(result) {
   return i => {
     console.log(`${result} clicked`)
-    var random = Math.floor(Math.random() * result.length)
+    var random = Math.floor(Math.random() * 3)
     var text;
 
     if (result === 'pop') {
@@ -48,4 +48,6 @@ function generateText(result) {
       bedpopTxt.innerText = text;
     }
   }
+
+  clearbutton.addEventListener('click', clear);
 }
