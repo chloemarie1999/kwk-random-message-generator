@@ -26,6 +26,7 @@ indieButton.addEventListener('click', generateText('indie'))
 altButton.addEventListener('click', generateText('alternative'))
 bedpopButton.addEventListener('click', generateText('bedpop'))
 
+//function to generate the text to display for result
 function generateText(result) {
   return i => {
     console.log(`${result} clicked`)
